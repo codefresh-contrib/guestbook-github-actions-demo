@@ -42,7 +42,7 @@ jobs:
           node /usr/src/app/index.js
         working-directory: /usr/src/app
         env:
-          IMAGE_URI: docker.io/salesdemocf/simple-docker-project:${{ github.sha }}
+          IMAGE_URI: docker.io/salesdemocf/guestbook:${{ github.sha }}
           CF_API_KEY: ${{ secrets.CF_RUNTIME_KEY }}
           GIT_BRANCH: ${{ github.ref_name }}
           GIT_REVISION: ${{ github.sha }}
@@ -76,7 +76,7 @@ jobs:
           node /app/src/index.js
         working-directory: /app/
         env:
-          IMAGE: docker.io/salesdemocf/simple-docker-project:${{ github.sha }}
+          IMAGE: docker.io/salesdemocf/guestbook:${{ github.sha }}
           CF_API_KEY: ${{ secrets.CF_PLATFORM_KEY }}
           JIRA_PROJECT_PREFIX: PS
           JIRA_HOST: codefresh-io.atlassian.net
@@ -99,7 +99,7 @@ jobs:
         run: node /app/src/index.js
         working-directory: /app/
         env:
-          IMAGE_SHA: docker.io/salesdemocf/simple-docker-project:${{ github.sha }}
+          IMAGE_SHA: docker.io/salesdemocf/guestbook:${{ github.sha }}
           CF_API_KEY: ${{ secrets.CF_PLATFORM_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
           BRANCH: ${{ github.head_ref }}
