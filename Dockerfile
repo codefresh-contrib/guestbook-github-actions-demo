@@ -1,3 +1,3 @@
-FROM gcr.io/heptio-images/ks-guestbook-demo
+FROM gcr.io/heptio-images/ks-guestbook-demo:1.0
 
-LABEL version="2.0"
+LABEL version="1.1"
