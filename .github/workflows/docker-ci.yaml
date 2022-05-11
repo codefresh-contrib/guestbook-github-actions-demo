@@ -11,14 +11,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag salesdemocf/guestbookt:${{ github.sha }}
+      run: docker build . --file Dockerfile --tag salesdemocf/guestbook:${{ github.sha }}
 
     - name: Push To Registry
       uses: redhat-actions/push-to-registry@v2.5.1
       with:
-        image: salesdemocf/guestbook
+        image: guestbook
         tags: ${{ github.sha }}
-        registry: docker.io
+        registry: docker.io/salesdemocf
         username: salesdemocf
         password: ${{ secrets.docker_registry_password }}
 
