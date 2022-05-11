@@ -16,9 +16,9 @@ jobs:
     - name: Push To Registry
       uses: redhat-actions/push-to-registry@v2.5.1
       with:
-        image: guestbook
+        image: salesdemocf/guestbook
         tags: ${{ github.sha }}
-        registry: docker.io/salesdemocf
+        registry: docker.io
         username: salesdemocf
         password: ${{ secrets.docker_registry_password }}
 
